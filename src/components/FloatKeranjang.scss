@@ -1,0 +1,17 @@
+.float-keranjang {
+    background-color: #dc3545;
+    display: flex;
+    width: max-content;
+    z-index: 1;
+    bottom: 0;
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 0;
+    transition: .2s;
+    &:hover {
+        background-color: #fc6170;
+    }
+}
+.nonActive {
+  transform: scale(0, 0);
+}

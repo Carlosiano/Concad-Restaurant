@@ -1,0 +1,146 @@
+{
+  "menu": [
+    [
+      {
+        "nama": "Nasi Goreng",
+        "harga": 10000,
+        "img": "nasi_goreng.jpg",
+        "diskon": 0
+      },
+      {
+        "nama": "Nasi Ayam",
+        "harga": 15000,
+        "img": "nasi_ayam.jpg",
+        "diskon": 20
+      },
+      {
+        "nama": "Nasi Kuning",
+        "harga": 12000,
+        "img": "nasi_kuning.jpeg",
+        "diskon": 0
+      },
+      {
+        "nama": "Nasi Liwet",
+        "harga": 10000,
+        "img": "nasi_liwet.jpg",
+        "diskon": 20
+      },
+      {
+        "nama": "Nasi Uduk",
+        "harga": 10000,
+        "img": "nasi_uduk.jpg",
+        "diskon": 0
+      }
+    ],
+    [
+      {
+        "nama": "Mie Ayam",
+        "harga": 12000,
+        "img": "mie_ayam.jpeg",
+        "diskon": 20
+      },
+      {
+        "nama": "Mie Goreng",
+        "harga": 8000,
+        "img": "mie_goreng.jpg",
+        "diskon": 0
+      },
+      {
+        "nama": "Mie Soto",
+        "harga": 12000,
+        "img": "mie_soto.jpg",
+        "diskon": 20
+      }
+    ],
+    [
+      {
+        "nama": "Coklat Panas",
+        "harga": 10000,
+        "img": "coklat_panas.jpeg",
+        "diskon": 20
+      },
+      {
+        "nama": "Jus Jeruk",
+        "harga": 10000,
+        "img": "jus_jeruk.jpg",
+        "diskon": 0
+      },
+      {
+        "nama": "Kopi Panas",
+        "harga": 5000,
+        "img": "kopi_panas.jpg",
+        "diskon": 0
+      },
+      {
+        "nama": "Susu Kocok",
+        "harga": 12000,
+        "img": "susu_kocok.jpeg",
+        "diskon": 20
+      },
+      {
+        "nama": "Teh Susu",
+        "harga": 10000,
+        "img": "teh_susu.jpg",
+        "diskon": 0
+      }
+    ]
+  ],
+  "combo": [
+    [
+      {
+        "nama": "Paket 1",
+        "harga": 48000,
+        "list": [
+          "Nasi Ayam",
+          "Mie Soto",
+          "Teh Susu"
+        ]
+      },
+      {
+        "nama": "Paket 2",
+        "harga": 48000,
+        "list": [
+          "Nasi Goreng",
+          "Mie Goreng",
+          "Susu Kocok"
+        ]
+      },
+      {
+        "nama": "Paket 3",
+        "harga": 48000,
+        "list": [
+          "Nasi Liwet",
+          "Mie Ayam",
+          "Coklat Panas"
+        ]
+      },
+      {
+        "nama": "Paket 3",
+        "harga": 48000,
+        "list": [
+          "Nasi Liwet",
+          "Mie Ayam",
+          "Coklat Panas"
+        ]
+      },
+      {
+        "nama": "Paket 3",
+        "harga": 48000,
+        "list": [
+          "Nasi Liwet",
+          "Mie Ayam",
+          "Coklat Panas"
+        ]
+      },
+      {
+        "nama": "Paket 3",
+        "harga": 48000,
+        "list": [
+          "Nasi Liwet",
+          "Mie Ayam",
+          "Coklat Panas"
+        ]
+      }
+    ]
+  ]
+}
