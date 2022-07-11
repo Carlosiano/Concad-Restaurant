@@ -6,7 +6,6 @@ export default function Menu() {
     <>
       <FloatKeranjang />
       <SlideMenu />
-      {/* <ListMenu /> */}
       <ListMenuCard />
       <Footer />
     </>

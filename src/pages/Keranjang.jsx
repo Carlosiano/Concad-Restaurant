@@ -7,6 +7,7 @@ import { DataMenu, DataMenuCategory } from '../assets/data/menu';
 
 export default function Keranjang() {
 
+  // isi variabel cart ketika ada pesanan di database
   useEffect(() => {
     db.collection("cart")
       .onSnapshot((querySnapshot) => {
@@ -24,24 +25,21 @@ export default function Keranjang() {
 
   }, []);
 
-  console.log(DataMenuCategory)
-
   const [products, setProducts] = useState(DataMenu)
   const [cart, setCart] = useState([])
 
+  // fungsi untuk menambah pesanan ke database
   function addToCart(item) {
     products.map((i) => {
       if (i.id == item.id) {
         i.cart = true
       }
     })
-
     db.collection('cart').doc(`${item.id}`).set(item, { merge: true })
-
   }
 
+  // fungsi untuk menghapus pesanan dari database
   function removeFromCart(item) {
-
     products.map((i) => {
       if (i.id === item.id) {
         i.cart = false
@@ -49,9 +47,13 @@ export default function Keranjang() {
     })
     db.collection('cart').doc(`${item.id}`).delete()
   }
+
+  // fungsi untuk menambah jumblah pesanan
   function increase(item) {
     db.collection('cart').doc(`${item.id}`).update("quantity", fs.firestore.FieldValue.increment(1))
   }
+
+  // fungsi untuk mengurangi jumblah pesanan
   function decrease(item) {
     if (item.quantity == 1) {
       removeFromCart(item)
@@ -59,6 +61,7 @@ export default function Keranjang() {
     db.collection('cart').doc(`${item.id}`).update("quantity", fs.firestore.FieldValue.increment(-1))
   }
 
+  // fungsi untuk menampilkan total harga pesanan
   const showTotal = () => {
     let total = 0
     cart.map((item) => {
@@ -78,6 +81,7 @@ export default function Keranjang() {
                   <h3 className="fw-normal mb-0 text-black">Shopping Cart</h3>
                 </div>
                 {
+                  // melakukan perulangan untuk menampilkan semua list menu yang ada di keranjang
                   cart.map((menu) => (
                     <div className="card rounded-3 mb-4">
                       <div className="card-body p-4">
