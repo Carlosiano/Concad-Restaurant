@@ -3,14 +3,8 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import { Footer } from '../components'
 import './About.scss'
 
-let coba = [
-  "https://bootstrapious.com/i/snippets/sn-about/avatar-4.png",
-  "https://bootstrapious.com/i/snippets/sn-about/avatar-3.png",
-  "https://bootstrapious.com/i/snippets/sn-about/avatar-2.png",
-  "https://bootstrapious.com/i/snippets/sn-about/avatar-1.png"
-]
-
 export default function About() {
+  // data array yang berisi object mahasiswa
   const team = [
     {
       nama: "Mario Sebastian Carlosiano",
@@ -91,7 +85,7 @@ export default function About() {
           </div>
 
           <div class="row text-center">
-
+            {/* perulangan untuk menampilkan seluruh data team */}
             {
               team.map(data => (
                 <div class="col-xl-3 col-sm-6 mb-5">
