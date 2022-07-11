@@ -7,7 +7,7 @@ nasi.push(MenuJson.menu[0].map((element, index) => (
   {
 
     nama: element.nama,
-    id: index,
+    id: index + 1,
     harga: element.harga,
     img: element.img,
     diskon: element.diskon,
@@ -19,7 +19,7 @@ mie.push(MenuJson.menu[1].map((element, index) => (
   {
 
     nama: element.nama,
-    id: index + nasi[0].length,
+    id: index + nasi[0].length + 1,
     harga: element.harga,
     img: element.img,
     diskon: element.diskon,
@@ -31,7 +31,7 @@ minuman.push(MenuJson.menu[2].map((element, index) => (
   {
 
     nama: element.nama,
-    id: index + mie[0].length + nasi[0].length,
+    id: index + mie[0].length + nasi[0].length + 1,
     harga: element.harga,
     img: element.img,
     diskon: element.diskon,

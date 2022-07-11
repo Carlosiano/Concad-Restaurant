@@ -3,7 +3,7 @@ import { db, fs } from '../libs/firebase-config'
 import { FaTrash } from 'react-icons/fa';
 import './Keranjang.scss'
 import { Footer } from '../components'
-import { DataMenu } from '../assets/data/menu';
+import { DataMenu, DataMenuCategory } from '../assets/data/menu';
 
 export default function Keranjang() {
 
@@ -23,6 +23,8 @@ export default function Keranjang() {
       });
 
   }, []);
+
+  console.log(DataMenuCategory)
 
   const [products, setProducts] = useState(DataMenu)
   const [cart, setCart] = useState([])
@@ -58,11 +60,11 @@ export default function Keranjang() {
   }
 
   const showTotal = () => {
-    let x = 0
+    let total = 0
     cart.map((item) => {
-      x += item.harga - item.harga * (item.diskon / 100) * item.quantity
+      total += (item.harga - (item.harga * (item.diskon / 100))) * item.quantity
     })
-    return x
+    return total
   }
 
   return (
@@ -85,6 +87,7 @@ export default function Keranjang() {
                           </div>
                           <div className="col-md-3 col-lg-3 col-xl-3">
                             <p className="lead fw-normal mb-2">{menu.nama}</p>
+                            <h5 className="mb-0">Rp.{menu.harga - (menu.harga * (menu.diskon / 100))}</h5>
                           </div>
                           <div className="col-md-3 col-lg-3 col-xl-2 d-flex">
                             <div className="btn-group" role="group" aria-label="Basic mixed styles example">
@@ -94,7 +97,7 @@ export default function Keranjang() {
                             </div>
                           </div>
                           <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                            <h5 className="mb-0">Rp.{menu.harga - (menu.harga * (menu.diskon / 100))}</h5>
+                            <h5 className="mb-0">Rp.{(menu.harga - (menu.harga * (menu.diskon / 100))) * menu.quantity}</h5>
                           </div>
                           <div className="col-md-1 col-lg-1 col-xl-1 text-end">
                             <a href="#" className="text-danger">
@@ -108,7 +111,9 @@ export default function Keranjang() {
                 }
                 <div className="card">
                   <div className="card-body d-flex justify-content-between align-items-center">
-                    <button type="button" className="btn btn-danger btn-block btn-lg">Proceed to Pay</button>
+                    <a href="https://wa.me/6281215046219?text=I%20am%20interested%20in%20your%20car%20for%20sale">
+                      <button type="button" className="btn btn-danger btn-block btn-lg">Proceed to Pay</button>
+                    </a>
                     <h3 className='text-success'>Rp.{showTotal()}</h3>
                   </div>
                 </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { Footer } from '../components'
 import './About.scss'
 
 let coba = [
@@ -19,12 +20,22 @@ export default function About() {
     {
       nama: "Paskalis Nani Randang",
       avatar: "https://bootstrapious.com/i/snippets/sn-about/avatar-3.png",
-      nim: "20.11.3439"
+      nim: "20.11.3473"
     },
     {
       nama: "Sendi Tiantara",
       avatar: "https://bootstrapious.com/i/snippets/sn-about/avatar-2.png",
-      nim: "20.11.3439"
+      nim: "20.11.3470"
+    },
+    {
+      nama: "Adhe Putra Kusuma Dwi Wardhana",
+      avatar: "https://bootstrapious.com/i/snippets/sn-about/avatar-4.png",
+      nim: "20.11.3440"
+    },
+    {
+      nama: "Andrew Joshua Marthin Lumatauw",
+      avatar: "https://bootstrapious.com/i/snippets/sn-about/avatar-3.png",
+      nim: "20.11.3425"
     }
   ]
   return (
@@ -116,7 +127,7 @@ export default function About() {
           </div>
         </div>
       </div>
-
+      <Footer />
     </div>
   )
 }

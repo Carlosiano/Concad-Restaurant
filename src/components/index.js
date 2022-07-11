@@ -7,4 +7,4 @@ export { default as ListMenu } from "./ListMenu";
 export { default as Navbar } from "./Navbar";
 export { default as PromoBanner } from "./PromoBanner";
 export { default as SlideMenu } from "./SlideMenu"
-
+export { default as ToatsComponent } from "./ToatsComponent"

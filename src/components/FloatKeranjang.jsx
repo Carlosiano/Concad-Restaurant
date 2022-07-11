@@ -29,7 +29,7 @@ export default function FloatKeranjang() {
   function showTotal() {
     let x = 0
     cart.map((i) => {
-      x += i.harga - i.harga * (i.diskon / 100) * i.quantity
+      x += (i.harga - (i.harga * (i.diskon / 100))) * i.quantity
     })
     return x
   }

@@ -3,12 +3,12 @@ import { Jumbotron, PromoBanner, DiskonCard, Footer, FloatKeranjang } from "../c
 
 export default function Home() {
   return (
-    <>
+    <div>
       <Jumbotron />
       <PromoBanner />
       <DiskonCard />
       <Footer />
       <FloatKeranjang />
-    </>
+    </div>
   );
 }
